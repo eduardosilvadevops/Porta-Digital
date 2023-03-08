@@ -20,16 +20,16 @@ int main(){
 
     sleep(1.5);                                                                 // dormi por 1.5s para simular inicilização do sistema
     do{                                                                         // inicio loop do while
-		printf("Digite a Senha: ");                                             // Mensagem pedindo a senha
+	printf("Digite a Senha: ");                                             // Mensagem pedindo a senha
         while(scanf("%d", &passwd_user) != 1){                                  // recebe a senha do usuario e testa se é apenas numeros, caso tiver char cai no loop
             printf("Caracteres Invalidos, Digite Apenas Numeros\n");            // mensagem alerta de caracteres invalido
-        	printf("Digite a Senha: ");                                         // mensagem perdindo a senha novamente
-        	while(getchar() != '\n');                                           // não sei o que este comando faz
+            printf("Digite a Senha: ");                                         // mensagem perdindo a senha novamente
+            while(getchar() != '\n');                                           // não sei o que este comando faz
 		}
 
-		if (i == 4){                                                            // testa para saber se o usuario tentou 4 vezes
+	if (i == 4){                                                            // testa para saber se o usuario tentou 4 vezes
             printf("Senha Invalida, Bloqueado por 30 Segundos\n");              // mensagem indicado que foi bloqueado
-			sleep(30);                                                          // simulando bloqueio do usuario
+	    sleep(30);                                                          // simulando bloqueio do usuario
             i = 0;                                                              // apos 30s numero de tentativas sera resetado
         }
 		
